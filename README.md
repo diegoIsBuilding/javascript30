@@ -1,2 +1,2 @@
-# javascript30
+# Javascript - 30
 30 Javascript Projects Challenge 
