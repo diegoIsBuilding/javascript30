@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background: url("images/dub-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.keys {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.key {
+  /* Container Setup */
+  display: flex;
+  flex: 0 0 32%;
+  flex-direction: column;
+  height: 32%;
+  align-items: center;
+  justify-content: center;
+  /* Style Below */
+  border: .2rem solid rgb(68, 53, 53);
+  border-radius: .5rem;
+  font-size: 2rem;
+  transition: all .07s ease;
+}
+.playing {
+  transform: scale(1.5);
+  border-color: #5a324e;
+  box-shadow: 0 0 1rem rgb(255, 255, 255);
+}
+.sound {
+  text-transform: uppercase;
+  color: rgb(204, 84, 84);
+  text-shadow: .1rem .1rem rgb(0, 0, 0)
+}
+kbd {
+  text-transform: uppercase;
+  color: rgb(68, 53, 53);
+  text-shadow: .05rem .05rem rgb(0, 0, 0)
+}
+
