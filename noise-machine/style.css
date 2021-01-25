@@ -28,10 +28,10 @@ body {
   border: .2rem solid rgb(68, 53, 53);
   border-radius: .5rem;
   font-size: 2rem;
-  transition: all .07s ease;
+  transition: all 1s ease;
 }
 .playing {
-  transform: scale(1.5);
+  transform: scale(1.25);
   border-color: #5a324e;
   box-shadow: 0 0 1rem rgb(255, 255, 255);
 }
