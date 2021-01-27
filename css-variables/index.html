@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="index.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Update CSS Variables with <span class="highlight">JS</span></h2>
+    <!-- Container for the adjustable controls -->
+    <!-- There is a spacing control, blur, and base color -->
+
+    <div class="controls">
+      <!-- Spacing -->
+      <label for="spacing">Spacing:</label>
+      <input
+        id="spacing"
+        type="range"
+        name="spacing"
+        min="10"
+        max="200"
+        value="10"
+        data-sizing="px"
+      />
+      <!-- Blur -->
+      <label for="blur">Blur:</label>
+      <input
+        id="blur"
+        type="range"
+        name="blur"
+        min="0"
+        max="25"
+        value="10"
+        data-sizing="px"
+      />
+      <!-- Base Color -->
+      <label for="base">Base Color</label>
+      <input id="base" type="color" name="base" value="#ffc600" />
+    </div>
+    <!-- img -->
+    <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500" />
+  </body>
+</html>

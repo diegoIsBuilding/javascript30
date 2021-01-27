@@ -12,20 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const minuteConvertedToDegrees = (currentMinute / 60) * 360 + 90;
     const hourConvertedToDegrees = (currentHour / 12) * 360 + 90;
 
-    console.log(
-      "SEC: " + currentSecond,
-      "MIN: " + currentMinute,
-      "HR: " + currentHour,
-
-      "DEGS: " + secondConvertedToDegrees,
-    );
     // Fix transform bug
     // ISSUE: Once the second hand hits 0 seconds it reset backwards
     // instead of transforming forward onto the next interval
-
-    if (currentSecond === 0 && secondConvertedToDegrees === 90) {
-        secondHand.style.transform.rotate(90);
-    }
+    // -- this does not work
+    // if (currentSecond === 0 && secondConvertedToDegrees === 90) {
+    //     //secondHand.style.transform.rotate(90);
+    // }
 
     secondHand.style.transform = `rotate(${secondConvertedToDegrees}deg)`;
     minuteHand.style.transform = `rotate(${minuteConvertedToDegrees}deg)`;
