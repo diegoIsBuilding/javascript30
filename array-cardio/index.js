@@ -130,25 +130,74 @@ console.table(inventorsAgeOrder);
 
 //REMEMBER A NODE LIST DOES NOT EQUAL ARRAY
 // Grab the category list
-                        // const wikiCategory = document.querySelector(".mw-category");
-                        // // Grab each link which are anchor tags from wikiCategory
-                        // const categoryLinks = Array.from(wikiCategory.querySelectorAll("a"));
-                        // // now that we have the list of Boulevards, now create a new list with Boulevards
-                        // // containing the characters 'de'
-                        // const boulevardsWithDE = categoryLinks
-                        // .map((link) => link.textContent)
-                        // .filter((boulevardName) => boulevardName.includes("de"));
+// const wikiCategory = document.querySelector(".mw-category");
+// // Grab each link which are anchor tags from wikiCategory
+// const categoryLinks = Array.from(wikiCategory.querySelectorAll("a"));
+// // now that we have the list of Boulevards, now create a new list with Boulevards
+// // containing the characters 'de'
+// const boulevardsWithDE = categoryLinks
+// .map((link) => link.textContent)
+// .filter((boulevardName) => boulevardName.includes("de"));
 
 
+
+
+
+
+//
+//question 7 and 8 were challenging 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
 // Using MDN Web Docs Sorting Example
 // THIS IS FOR THE PEOPLE LIST
-const inventorsSortedAlphaByLastName = inventors.sort((firstLastName, nextLastName) => {
-    console.log("Exercise 7");
-    //console.log(firstLastName, nextLastName);
-    const a = firstLastName.last
-    const b = nextLastName.last
-    console.log(a);
-    console.log(b);
-})
+const alphabeticalLastNames = people.sort((name, nextName) => {
+  console.log("Exercise 7");
+  // attempt without destructuring
+  const splitName = name.split(", ");
+  const firstLastName = splitName[0];
+  // console.log(firstLastName);
+  const nextSplitName = nextName.split(", ");
+  const nextLastName = nextSplitName[0];
+
+  if (firstLastName < nextLastName) {
+    return -1;
+  } else {
+    return 1;
+  }
+});
+console.table(alphabeticalLastNames);
+
+// 8. Reduce Exercise
+// Sum up the instances of each of these
+// expected example output would be something like
+// {
+//     car: 5,
+//     truck: 3
+// }
+console.log("Exercise 8");
+const data = [
+  "car",
+  "car",
+  "truck",
+  "truck",
+  "bike",
+  "walk",
+  "car",
+  "van",
+  "bike",
+  "walk",
+  "car",
+  "van",
+  "car",
+  "truck",
+  "pogostick",
+];
+const vehicles = data.reduce((object, item) => {
+  console.log(object);
+  if (!object[item]) {
+    obj[item] = 0;
+  }
+  obj[item]++;
+  return obj;
+  // I dont really understand this part. Why do we need an empty object there? 
+}, {});
