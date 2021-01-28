@@ -193,11 +193,11 @@ const data = [
   "pogostick",
 ];
 const vehicles = data.reduce((object, item) => {
-  console.log(object);
   if (!object[item]) {
-    obj[item] = 0;
+    object[item] = 0;
   }
-  obj[item]++;
-  return obj;
+  object[item]++;
+  return object;
   // I dont really understand this part. Why do we need an empty object there? 
 }, {});
+console.table(vehicles)
