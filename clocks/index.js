@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const minuteConvertedToDegrees = (currentMinute / 60) * 360 + 90;
     const hourConvertedToDegrees = (currentHour / 12) * 360 + 90;
 
+    // remove the thing that cause the bug 
+    // take the class off and set a set-timeout
+    // counter 
+
     // Fix transform bug
     // ISSUE: Once the second hand hits 0 seconds it reset backwards
     // instead of transforming forward onto the next interval
