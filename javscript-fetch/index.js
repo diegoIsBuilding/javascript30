@@ -1,5 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+const searchInput = document.querySelector('.search');
+console.log('Checking Input Form', searchInput);
+const suggestions = document.querySelector('.suggestions')
+console.log(suggestions);
+// the change event will only fire when you click of the input search bar
+searchInput.addEventListener('change', displayMatches);
+// we can also listen to the event with keyup
+searchInput.addEventListener('keyup', displayMatches);
+
 })
 // shortened the json data url 
 const endpoint = "https://tinyurl.com/j8t8snkp";
@@ -23,7 +32,18 @@ function findTextMatch (textToMatch, locationsDataArray) {
     return location.city.match(regex) || location.state.match(regex);
   });
 }
-function displayMatches () {
-    
+function displayMatches (suggestions) {
+    //console.log(this.value);
+    const matchArray = findTextMatch(this.value, locationsDataArray);
+    console.log(matchArray);
+    const html = matchArray.map(location => {
+      return `
+        <li>
+        <span class="name">${location.city}, ${location.state}</span>
+        <span class="population">${location.population}</span>
+        </li>
+      `;
+    }).join('');
+    suggestions.innerHTML = html;
 }
 
